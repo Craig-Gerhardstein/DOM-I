@@ -74,7 +74,7 @@ mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']
  const contactP = document.querySelectorAll('.contact p')
 
  contactH4.textContent = siteContent['contact']['contact-h4']
- contactP[0].textContent = siteContent['contact']['address']
+ contactP[0].innerHTML = siteContent['contact']['address'].split('t S').join('t <br> S')
  contactP[1].textContent = siteContent['contact']['phone']
  contactP[2].textContent = siteContent['contact']['email']
 
