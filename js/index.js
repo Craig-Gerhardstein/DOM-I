@@ -36,6 +36,70 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+const navBar = document.querySelector('nav')
+const navA = document.querySelectorAll('nav a')
+navA[0].textContent = siteContent['nav']['nav-item-1']
+navA[1].textContent = siteContent['nav']['nav-item-2']
+navA[2].textContent = siteContent['nav']['nav-item-3']
+navA[3].textContent = siteContent['nav']['nav-item-4']
+navA[4].textContent = siteContent['nav']['nav-item-5']
+navA[5].textContent = siteContent['nav']['nav-item-6']
+
+let imgLogo = document.getElementById("cta-img");
+imgLogo.setAttribute('src', siteContent["cta"]["img-src"])
+const header = document.querySelector('h1')
+header.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>')
+const button = document.querySelector('button')
+button.textContent = siteContent['cta']['button']
+
+const mainContentP = document.querySelectorAll('.main-content p')
+const mainContentH4 = document.querySelectorAll('.main-content h4')
+const mainContentImg = document.getElementById('middle-img')
+
+mainContentH4[0].textContent = siteContent['main-content']['features-h4']
+mainContentH4[1].textContent = siteContent['main-content']['about-h4']
+mainContentH4[2].textContent = siteContent['main-content']['services-h4']
+mainContentH4[3].textContent = siteContent['main-content']['product-h4']
+mainContentH4[4].textContent = siteContent['main-content']['vision-h4']
+
+mainContentP[0].textContent = siteContent['main-content']['features-content']
+mainContentP[1].textContent = siteContent['main-content']['about-content']
+mainContentP[2].textContent = siteContent['main-content']['services-content']
+mainContentP[3].textContent = siteContent['main-content']['product-content']
+mainContentP[4].textContent = siteContent['main-content']['vision-content']
+
+mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+ const contactH4 = document.querySelector('.contact h4')
+ const contactP = document.querySelectorAll('.contact p')
+
+ contactH4.textContent = siteContent['contact']['contact-h4']
+ contactP[0].textContent = siteContent['contact']['address']
+ contactP[1].textContent = siteContent['contact']['phone']
+ contactP[2].textContent = siteContent['contact']['email']
+
+ const footerP = document.querySelector('footer p')
+ footerP.textContent = siteContent['footer']['copyright']
+
+ for(let i = 0; i < navA.length; i++ ){
+   navA[i].style.color = 'green'
+   
+ }
+ const addNav1 = document.createElement('a')
+ addNav1.textContent = 'Link 2'
+const addNav2 = document.createElement('a')
+addNav2.textContent = 'Link 1'
+
+addNav1.style.color = 'green'
+addNav2.style.color = 'green'
+
+navBar.appendChild(addNav2)
+navBar.prepend(addNav1)
+
+
+
+
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
